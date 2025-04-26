@@ -1,0 +1,81 @@
+===========================================================================
+Exercise Session #2
+===========================================================================
+
+#1. Access following folders and see if you can see them
+
+/data/labs/common/linux-course/session2/dir_for_others_with_readonly_permission
+/data/labs/common/linux-course/session2/dir_for_owner_group_readonly
+/data/labs/common/linux-course/session2/dir_for_owner_only
+/data/labs/common/linux-course/session2/dir_for_po_group_writable
+/data/labs/common/linux-course/session2/dir_for_others_with_write_permission
+/data/labs/common/linux-course/session2/dir_for_owner_group_writable
+/data/labs/common/linux-course/session2/dir_for_po_group_readonly
+/data/labs/common/linux-course/session2/dir_with_default_umask
+
+Check their permission setup done and tell why you can or can not see folder contents?
+
+
+#2. Try to create a sample file in these folder by running following command
+mktemp  <folder_path>/${LOGNAME}_test.XXXXXX
+
+e..g
+mktemp /data/labs/common/linux-course/session2/dir_for_po_group_writable/${LOGNAME}_test.XXXXXX
+mktemp /data/labs/common/linux-course/session2/dir_for_others_with_write_permission/${LOGNAME}_test.XXXXXX
+
+Try out
+/data/labs/common/linux-course/session2/dir_for_po_group_writable
+/data/labs/common/linux-course/session2/dir_for_owner_group_writable
+/data/labs/common/linux-course/session2/dir_with_default_umask
+/data/labs/common/linux-course/session2/dir_for_others_with_write_permission
+/data/labs/common/linux-course/session2/dir_for_po_group_readonly
+/data/labs/common/linux-course/session2/dir_for_owner_group_readonly
+/data/labs/common/linux-course/session2/dir_for_others_with_readonly_permission
+
+
+Where does command succeeds and fails ? Think and share your understanding in a discussion
+
+
+
+#3 Try to update file that is owned by a different owner in following folders. Check which files can be updated and which not. What is the reason?
+(For updating file append using following command:
+echo "Appending being done by $LOGNAME at `date` " >> <filename>
+
+Try it out on
+
+session2/dir_for_others_with_readonly_permission/for_others_test_file_for_updation.txt
+session2/dir_for_others_with_readonly_permission/for_others_test_file_for_writing.txt
+session2/dir_for_others_with_readonly_permission/test_file_for_updation.txt
+session2/dir_for_others_with_readonly_permission/test_file_for_writing.txt
+session2/dir_for_others_with_write_permission/for_others_test_file_for_other_updation.txt
+session2/dir_for_others_with_write_permission/for_others_test_file_for_other_writing.txt
+session2/dir_for_others_with_write_permission/for_others_test_file_for_updation.txt
+session2/dir_for_others_with_write_permission/for_others_test_file_for_writing.txt
+session2/dir_for_others_with_write_permission/test_file_for_updation.txt
+session2/dir_for_others_with_write_permission/test_file_for_writing.txt
+session2/dir_for_owner_group_readonly/for_others_test_file_for_updation.txt
+session2/dir_for_owner_group_readonly/for_others_test_file_for_writing.txt
+session2/dir_for_owner_group_readonly/test_file_for_updation.txt
+session2/dir_for_owner_group_readonly/test_file_for_writing.txt
+session2/dir_for_owner_group_writable/for_others_test_file_for_updation.txt
+session2/dir_for_owner_group_writable/for_others_test_file_for_writing.txt
+session2/dir_for_owner_group_writable/test_file_for_updation.txt
+session2/dir_for_owner_group_writable/test_file_for_writing.txt
+session2/dir_for_owner_only/for_others_test_file_for_updation.txt
+session2/dir_for_owner_only/for_others_test_file_for_writing.txt
+session2/dir_for_owner_only/test_file_for_updation.txt
+session2/dir_for_owner_only/test_file_for_writing.txt
+session2/dir_for_po_group_readonly/for_others_test_file_for_updation.txt
+session2/dir_for_po_group_readonly/for_others_test_file_for_writing.txt
+session2/dir_for_po_group_readonly/test_file_for_updation.txt
+session2/dir_for_po_group_readonly/test_file_for_writing.txt
+session2/dir_for_po_group_writable/for_others_test_file_for_updation.txt
+session2/dir_for_po_group_writable/for_others_test_file_for_writing.txt
+session2/dir_for_po_group_writable/test_file_for_updation.txt
+session2/dir_for_po_group_writable/test_file_for_writing.txt
+session2/dir_with_default_umask/for_others_test_file_for_updation.txt
+session2/dir_with_default_umask/for_others_test_file_for_writing.txt
+session2/dir_with_default_umask/test_file_for_updation.txt
+session2/dir_with_default_umask/test_file_for_writing.txt
+
+
