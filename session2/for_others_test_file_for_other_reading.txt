@@ -1,0 +1,1 @@
+check if file for_others_test_file_for_other_reading.txt can be read by you
